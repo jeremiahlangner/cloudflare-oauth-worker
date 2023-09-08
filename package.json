@@ -1,0 +1,21 @@
+{
+  "name": "cloudflare-oauth-worker",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/worker.js",
+  "scripts": {
+    "build": "rm -rf build && npx esbuild src/worker.ts --bundle --outdir=build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jeremiah Langner",
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230904.0",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/web": "^0.0.114"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2"
+  }
+}
