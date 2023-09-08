@@ -16,6 +16,7 @@
     "@types/web": "^0.0.114"
   },
   "dependencies": {
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "simple-worker-router": "github:jeremiahlangner/simple-worker-router"
   }
 }
