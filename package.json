@@ -4,7 +4,7 @@
   "description": "",
   "main": "build/worker.js",
   "scripts": {
-    "build": "rm -rf build && npx tsc && npx esbuild src/worker.ts --bundle --outdir=build --format=esm",
+    "build": "rm -rf build && npx tsc && npx esbuild src/worker.ts --bundle --minify --outdir=build --format=esm",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
