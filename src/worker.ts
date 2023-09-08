@@ -1,14 +1,10 @@
-import { Environment, FetchParams } from './types';
+import { Environment } from './types';
 import { Router } from 'simple-worker-router';
-
-function handler(params: Partial<FetchParams>) {}
 
 function authorize() {}
 
 export default {
-  async fetch(request: Request, env: any, ctx: any) {
-    const url = new URL(request.url);
-
+  async fetch(request: Request, env: Environment, ctx: any) {
     const router = new Router([
       ['/authorize', authorize],
       ['/code', authorize],
@@ -16,7 +12,6 @@ export default {
       ['/login', authorize],
       ['/resource', authorize],
     ]);
-
-    return handler({ request, env, ctx });
+    return router.handle({ request, env, ctx });
   },
 };
