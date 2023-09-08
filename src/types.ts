@@ -1,13 +1,15 @@
 type Environment = {
-  CODES: any;
-  TOKENS: any;
-  USERS: any;
+  OAuthClients: KVNamespace;
+  OAuthTokens: KVNamespace;
+  OAuthCodes: KVNamespace;
+  OAuthUsers: KVNamespace;
+
 }
 
-type FetchParams = {
+type Params = {
   request: Request;
   env: Environment;
   ctx: any;
 }
 
-export { Environment, FetchParams };
+export { Environment, Params };
